@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea,
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Loan Application Form</h2>
+    <form action="submit_loan_application.php" method="POST" enctype="multipart/form-data">
+        <label for="applicant_name">Applicant Name:</label>
+        <input type="text" id="applicant_name" name="applicant_name" required>
+
+        <label for="loan_amount">Loan Amount:</label>
+        <input type="number" id="loan_amount" name="loan_amount" required>
+
+        <label for="loan_purpose">Purpose of Loan:</label>
+        <textarea id="loan_purpose" name="loan_purpose" rows="4" required></textarea>
+
+        <label for="applicant_image">Upload Applicant Image:</label>
+        <input type="file" id="applicant_image" name="applicant_image" accept="image/*" required>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <style>
+        body, html {
+    margin:100px;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+#enrollment-section {
+   
+    width: 400px;
+    padding: 30px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#enrollment-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+h3.form-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0077ff;
+    padding-bottom: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input, select {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #0077ff;
+    box-shadow: 0 0 8px rgba(0, 119, 255, 0.5);
+}
+
+button {
+    background-color: #0077ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005ccc;
+}
+
+button:active {
+    background-color: #004bb5;
+    transform: scale(0.98);
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="enrollment-section">
+        <h3 class="form-title">Enrollment Form</h3>
+        <form id="enrollment-form" action="zittnet_enrollment.php" enctype="multipart/form-data" method="post">
+            <input type="date" name="date_enrollment" required>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="tel" name="Phone" pattern="[0-9]{11}" maxlength="11" placeholder="Phone Number (11 digits)" required>
+            <input type="text" name="contact_address" placeholder="Contact Address" required>
+            <input type="text" name="state" placeholder="State" required>
+            <input type="text" name="local_government" placeholder="Local Government" required>
+            <input type="text" name="nationality" placeholder="Nationality" required>
+            <select name="course_of_study" required>
+                <option value="">Select Course</option>
+                <option value="digital literacy">Digital Literacy</option>
+                <option value="web development">Web Development</option>
+                <option value="data analysis">Data Analysis</option>
+                <option value="cyber security">Cyber Security</option>
+                <option value="web hosting">Web Hosting</option>
+                <option value="online professional courses">Online Professional Courses</option>
+                <option value="hardware">Hardware</option>
+                <option value="software installation and configuration">Software Installation and Configuration</option>
+            </select>
+            <input type="text" name="sponsor_name" placeholder="Sponsor Name" required>
+            <input type="text" name="sponsor_address" placeholder="Sponsor Address" required>
+            <button type="submit">Submit Enrollment</button>
+        </form>
+    </div>
+</body>
+
+</html>

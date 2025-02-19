@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login to Account</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css" />
+  <style>
+    /* Global Styles & Background */
+    body {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #ecf0f1;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Login Container */
+    #login-section {
+      background-color: rgba(44, 62, 80, 0.85);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      width: 380px;
+      text-align: center;
+    }
+
+    #login-section h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #ecf0f1;
+    }
+
+    /* Form Elements */
+    #login-form input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ecf0f1;
+      color: #333;
+      font-size: 16px;
+    }
+
+    #login-form input:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+    #login-form button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #3498db;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #login-form button:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    #login-form button:active {
+      background-color: #1c5980;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-section">
+    <h2>Login</h2>
+    <form id="login-form" action="fantsuam_microfinace.html" method="post">
+      <input type="text" id="login-username" placeholder="Username" required />
+      <input type="password" id="login-password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      // Retrieve input values
+      const username = document.getElementById('login-username').value;
+      const password = document.getElementById('login-password').value;
+
+      // Check if username and password match the expected values
+      if (username !== "FANTSUAM MICROFINACE" || password !== "....") {
+        // Prevent form submission if invalid
+        event.preventDefault();
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>
